@@ -1,1 +1,35 @@
-{"mcpServers":{}}
+{
+  "mcpServers": {
+    "obsidian": {
+      "command": "npx",
+      "args": ["-y", "mcp-obsidian", "C:\\Users\\YOUR_USER\\Documents\\ObsidianVault"]
+    },
+    "voice-mode": {
+      "command": "wsl",
+      "args": ["bash", "-lc", "export PATH=$HOME/.local/bin:$PATH && STT_BASE_URL=http://127.0.0.1:2022/v1 TTS_BASE_URL=http://127.0.0.1:8880/v1 TTS_VOICE=af_bella uvx voice-mode"]
+    },
+    "desktop-commander": {
+      "command": "npx",
+      "args": ["-y", "desktop-commander"]
+    },
+    "webcam": {
+      "command": "npx",
+      "args": ["-y", "@llmindset/mcp-webcam"]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest"]
+    },
+    "ollama": {
+      "command": "npx",
+      "args": ["-y", "ollama-mcp"],
+      "env": {
+        "OLLAMA_HOST": "http://127.0.0.1:11434"
+      }
+    },
+    "hass-mcp": {
+      "command": "wsl",
+      "args": ["bash", "-lc", "export PATH=$HOME/.local/bin:$PATH && HA_URL=http://YOUR_HA_IP:8123 HA_TOKEN=YOUR_LONG_LIVED_ACCESS_TOKEN uvx hass-mcp"]
+    }
+  }
+}
